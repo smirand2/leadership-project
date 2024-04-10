@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Bridge Builders</title>
+    <link rel="icon" type="image/x-icon" href="images/uncclogo-fav.png">
+    <link rel="stylesheet" href="styles/experiences.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+                <img src="images/uncc-logo-engr.png" alt="Cultural Bridge Builders Logo">
+                <div class="title-container">
+                    <h1>WILLIAM STATES LEE COLLEGE OF ENGINEERING</h1>      
+                    <p>LEADERSHIP ACADEMY CULTURAL BRIDGE BUILDERS</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                <li><a href="timeline.html">MILESTONES</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">EXPERIENCES</a>
+                    <div class="dropdown-content">
+                        <a href="experiences.html">SUBMIT EXPERIENCE</a>
+                        <a href="forum.html">EXPERIENCE FORUM</a> <!-- Adjust the href to your forum page link -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+        <div class="form-container">
+            <h2>Share Your Experience</h2>
+            <form id="experienceForm action="Submit>
+              <!-- In your form, add a new select element for anonymous choice -->
+                <div class="form-group">
+                    <label for="anonymous" >Submit by:</label>
+                    <select id="anonymous" required name="anonymous" onchange="toggleNameField()">
+                        <option value="">Choose an option</option>
+                        <option value="no"> Name</option>
+                        <option value="yes">Anonymous</option>
+                    </select>
+                </div>
+
+                <!-- This is the name field, which will show/hide -->
+                <div class="form-group" id="nameField" style="display:none;">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Where are you from?</label>
+                    <select id="country" name="country">
+                        <!-- Add countries here -->
+                        <option value="">-- Choose --</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Africa">Africa</option>
+                        <option value="North America">North America</option>
+                        <option value="South America">South America</option>
+                        <option value="Antarctica">Antartica</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+          </div>
+  
+  
+        
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo-address">
+                <img src="images/uncc-logo-engr.png" alt="COEN Logo" class="footer-logo">
+                <address>
+                    9201 University City Boulevard<br>
+                    Charlotte, NC 28223
+                </address>
+            </div> 
+            <div class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="timeline.html">Milestones</a></li>
+                    <li><a href="ex 
+                        periences.html">Experiences</a></li>
+                </ul>
+            </div>     
+        </div>
+      
+        <div class="footer-bottom">
+            <p>&copy;2024 UNC Charlotte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="share.js"></script>
+</body>
+</html>
