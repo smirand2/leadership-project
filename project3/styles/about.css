@@ -1,0 +1,535 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header and nav bar styling*/
+.header-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Align vertically */
+    background-color:#194f38;
+    height: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+
+    
+}
+
+.logo-container img {
+    width: 180px; /* Adjust as needed */
+    margin-right: 1%; /* Space between logo and text */
+    margin-left: 10%;
+
+    
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    margin-right: 10%; /* Pushes the container to the left */
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.title-container h1,
+.title-container p {
+    margin: 0; /* Removes default margin */
+    color: white; /* Adjust text color as needed */
+    
+}
+
+/* reduce the space between "Cultural Bridge Builders" and the subtitle */
+.title-container h1 {
+    margin-bottom: 0%; /* Reduces space below the h1 */
+    font-size: 170%;
+}
+
+.title-container p {
+    padding-top: 0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 120%;
+    
+}
+
+
+nav {
+    background-color: #09452d; /* Same as header to maintain consistency */
+    border-top: 3px solid #a49665; /* Gold/Yellow top border */
+   
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    padding: 1% 0;
+    
+}
+
+nav ul li {
+    margin: 0 5%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color:white;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #09452d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #a49665;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #09452d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nav ul li:hover, .dropbtn:focus {
+    background-color: #a49665;
+}
+
+
+
+
+/*all content*/
+main {
+    padding: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Assuming a light gray background */
+}
+
+/*ABOUT : Main content*/
+
+.side-image {
+    flex: 1; /* Take up remaining space */
+    max-width: 50%; /* Maximum width of image */
+    padding-right: 10%;
+    
+}
+
+
+ h2{
+    color:#a49665;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-content {
+    padding: 0 15px;
+    padding-bottom: 2%;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    
+
+}
+
+
+.about-content h3{
+    background-color: #a49665;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.about-content p{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 5%;
+
+}
+/* Accordion styles */
+
+.accordion-container {
+    max-width: 600px; 
+    margin: 5rem auto 2rem; /* This will center the container */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*adds shadow for depth */
+    border-radius: 5px; 
+    background: white; /* For the background color */
+}
+
+/* Accordion Button */
+.accordion {
+    background-color: #a49665; /* Your color */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-top: 1px solid white; /* Adds separation between accordion items */
+    position: relative;
+}
+
+/* First accordion button to remove border-top */
+.accordion:first-of-type {
+    border-top: none;
+}
+
+/* Accordion Panel */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid #ddd; /* Adds a line at the bottom of the open panel */
+}
+
+/* Add some space around paragraphs in the panel */
+.panel p {
+    padding: 18px 0;
+}
+
+/* Style for active button to change when panel is open */
+.accordion.active {
+    background-color: #09452d;
+    color: white;
+}
+
+
+  
+.accordion::after {
+    content: "";
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform 0.4s ease-in-out;
+}
+  
+  /* Rotate the arrow to point down when the accordion is active (open) */
+.accordion.active::after {
+    transform: translateY(-50%) rotate(-135deg);
+    -webkit-transform: translateY(-50%) rotate(-135deg);
+}
+
+.section-button {
+    background-color: #a49665;
+    border: none;
+    padding: 10px 20px;
+    color: #333;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+
+}
+
+.section-button:hover {
+    background-color: #184e36;
+    color:white;
+  }
+  
+
+
+
+/* Carousel container */
+
+li {
+  list-style: none;
+}
+
+.carousel {
+  position: relative;
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+.carousel__images {
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel__track-container {
+  background: #a49665;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.carousel__button:hover {
+  background-color: #a49665;
+  border-radius: 20px;
+}
+
+.carousel__button--left {
+  left: -60px;
+}
+.carousel__button--right {
+  right: -60px;
+   transform: translateY(-80%) rotate(180deg)
+}
+.carousel__button img {
+  width: 25px;
+}
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 1rem;
+}
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background: #09452d;
+}
+.is-hidden {
+  display: none;
+}
+.carousel::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/*FOOTER */
+footer {
+    background-color: #184e36;
+    color: white;
+    padding-top: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.footer-logo-address {
+    margin-bottom:1%; /* Space between logo/address and link list */
+    font-size: 80%;
+}
+
+.footer-logo {
+    width: 30%;
+    margin-bottom: 1% /* Space between logo and address */
+}
+
+.footer-nav .footer-links a {
+    color: white; /* Set link color to white */
+    padding-top: 2%; /* Add padding to space out the links */
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content:left;
+    order: 3;
+    
+}
+
+.footer-links li{
+    list-style-type: none; /* Removes bullet points */
+}
+
+.footer-nav ul li a:hover {
+    color: #a49665; 
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Space between links and copyright text */
+    padding-top: 8px;
+    border-top: #a49665 3px solid;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 750px) {
+    /* header and nav bar*/
+    .title-container h1,
+    .title-container p {
+        font-size: 75%; /* Smaller text on smaller screens */
+    }
+
+    .logo-container {
+        flex-direction: row; /* Ensures logo and text are in one line */
+        flex-wrap: nowrap; /* Prevents wrapping of flex items */
+    }
+    .logo-container img {
+        width: 21%; /* Smaller logo on smaller screens */
+        margin: 1%;
+
+    }
+
+    .header-container, .title-container {
+        padding: 1%;
+        margin: 0;
+    }
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+    }
+
+    nav ul li a {
+        font-size: 80%; /* Smaller navigation links */
+    }
+
+    .about-content{
+        font-size: 90%;
+        width: 90%;
+
+        
+    }
+ 
+    .carousel {
+        width: 100%; /* Make the carousel full width on smaller screens */
+    }
+
+    .carousel__track-container{
+        width: 100%;
+        height: 90%;
+
+    }
+    .carousel__button--left,
+    .carousel__button--right {
+        display: none; /* Optionally hide buttons on very small screens */
+    }
+   
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer-logo-address {
+        margin-bottom: 2%; /* Space between logo/address and link list */
+        font-size: 60%;
+    }
+    
+    .footer-logo {
+        width: 25%;
+     }
+    
+    .footer-nav .footer-links a {
+        justify-content:left;
+        font-size: 60%;
+   
+        
+    }
+    
+    .footer-bottom {
+        margin-top: 20px; /* Space between links and copyright text */
+        padding-top: 2%;
+        font-size: 4%
+    }
+    
+
+
+}
+
+
+
+
+

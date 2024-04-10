@@ -1,0 +1,429 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header and nav bar styling*/
+.header-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Align vertically */
+    background-color:#194f38;
+    height: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+
+    
+}
+
+.logo-container img {
+    width: 180px; /* Adjust as needed */
+    margin-right: 1%; /* Space between logo and text */
+    margin-left: 10%;
+
+    
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    margin-right: 10%; /* Pushes the container to the left */
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.title-container h1,
+.title-container p {
+    margin: 0; /* Removes default margin */
+    color: white; /* Adjust text color as needed */
+    
+}
+
+/* reduce the space between "Cultural Bridge Builders" and the subtitle */
+.title-container h1 {
+    margin-bottom: 0%; /* Reduces space below the h1 */
+    font-size: 170%;
+}
+
+.title-container p {
+    padding-top: 0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 120%;
+}
+
+
+nav {
+    background-color: #09452d; /* Same as header to maintain consistency */
+    border-top: 3px solid #a49665; /* Gold/Yellow top border */
+   
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    padding: 1% 0;
+    
+}
+
+nav ul li {
+    margin: 0 5%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color:white;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #09452d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #a49665;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #09452d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nav ul li:hover, .dropbtn:focus {
+    background-color: #a49665;
+}
+
+
+
+
+/*all content*/
+main {
+    padding: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Assuming a light gray background */
+}
+
+
+
+/*INDEX: main content styling*/
+.leadership-academy-intro {
+    text-align: center; /* Center the logo image */
+    padding: 20px 0; /* Add some space around the logo */
+}
+.leadership-academy-intro h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    padding-left: 12%;
+    font-size: 30px;
+}
+.leadership-academy-intro img {
+   height: 50%;
+   width: 80%;
+
+}
+.LA-logo-image {
+    max-width: 60%; /* Ensure the image is responsive and fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.content-leadership {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    align-items: center; /* Center the content horizontally */
+    
+}
+
+.text-leadership {
+    max-width: 75%; /* Set a max width for the text content */
+    margin-bottom: 1%; /* Add space below the text before the team profiles */
+}
+
+
+
+.text-leadership h2{
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: black;
+    font-family:  'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: left;
+  
+}
+
+
+.about-button {
+    padding: 10px 20px; /* Add some padding inside the button */
+    margin-top: 20px; /* Add space above the button */
+    background-color: #00753a; /* Example button color, adjust as needed */
+    color: white; /* Text color for the button */
+    border: none; /* No border by default */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    border-radius: 5px; /* Rounded corners for the button */
+   
+}
+
+.about-button:hover{
+    color: #a49665;
+    background-color: #1f6144;
+}
+
+
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+.team-member {
+    text-align: center;
+    max-width: 300px; /* Adjust as needed */
+    margin: 20px;
+  }
+  
+.image-cropper {
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 10px; /* Center the image horizontally */
+  }
+  
+.team-photo {
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  
+.member-name {
+    font-size: 1.2em; /* Adjust as needed */
+    font-weight: bold;
+    color: #333; /* Adjust as needed */
+    margin: 10px 0 5px;
+  }
+  
+.member-title {
+    font-size: 1em; /* Adjust as needed */
+    font-weight: normal;
+    color: #666; /* Adjust as needed */
+    margin: 0 0 15px;
+  }
+  
+.member-bio {
+    font-size: 0.9em; /* Adjust as needed */
+    color: #333; /* Adjust as needed */
+    line-height: 1.4;
+  }
+  
+
+.content-section {
+    text-align: center; /* Centers the text and button */
+    padding: 5% 5%; /* Adjusts padding to your liking */
+}
+
+.section-image {
+    width: 80%; /* Makes the image responsive */
+    margin-bottom: 1rem; /* Adds space below the image */
+}
+
+.section-header {
+    font-size: 2rem; /* Adjusts the font size for headers */
+    color: #000; /* Changes color, remove if you want to keep the gold */
+    margin-bottom: 0.5rem; /* Adds space below the header */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.section-text {
+    margin-bottom: 1rem; /* Adds space below the paragraph text */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.section-button {
+    background-color: #a49665;
+    border: none;
+    padding: 10px 20px;
+    color: #333;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+
+}
+
+.section-button:hover {
+    background-color: #184e36;
+    color:white;
+  }
+
+
+
+/*FOOTER */
+footer {
+    background-color: #184e36;
+    color: white;
+    padding: 20px;  
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    justify-content: space-between;
+    align-items: center; /* Center-align items horizontally */
+    flex-wrap: wrap;
+}
+
+.footer-logo-address {
+    margin-bottom: 20px; /* Space between logo/address and link list */
+    font-size: 15px;
+}
+
+.footer-logo {
+    width: 40%;
+    margin-bottom: 1% /* Space between logo and address */
+}
+
+.footer-nav .footer-links a {
+    color: white; /* Set link color to white */
+    padding-top: 2%; /* Add padding to space out the links */
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    
+}
+
+.footer-links li{
+    list-style-type: none; /* Removes bullet points */
+}
+
+.footer-nav ul li a:hover {
+    color: #a49665; 
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Space between links and copyright text */
+    padding-top: 8px;
+    border-top: #a49665 3px solid;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 750px) {
+    /* header and nav bar*/
+    .title-container h1,
+    .title-container p {
+        font-size: 75%; /* Smaller text on smaller screens */
+    }
+
+    .logo-container {
+        flex-direction: row; /* Ensures logo and text are in one line */
+        flex-wrap: nowrap; /* Prevents wrapping of flex items */
+    }
+    .logo-container img {
+        width: 21%; /* Smaller logo on smaller screens */
+        margin: 1%;
+
+    }
+
+    .header-container, .title-container {
+        padding: 1%;
+        margin: 0;
+    }
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+    }
+
+    nav ul li a {
+        font-size: 80%; /* Smaller navigation links */
+    }
+
+  
+    .footer-logo-address {
+        margin-bottom: 2%; /* Space between logo/address and link list */
+        font-size: 60%;
+    }
+    
+    .footer-logo {
+        width: 25%;
+     }
+    
+    .footer-nav .footer-links a {
+        justify-content:left;
+        font-size: 60%;
+   
+        
+    }
+    
+    .footer-bottom {
+        margin-top: 20px; /* Space between links and copyright text */
+        padding-top: 2%;
+        font-size: 4%
+    }
+    
+  
+}
+
+
+
+
+
